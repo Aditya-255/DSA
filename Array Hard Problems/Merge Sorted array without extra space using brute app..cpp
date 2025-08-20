@@ -10,13 +10,13 @@ int main(){
 	int r=0;
 	int i=0;
 	while(l<n && r<m){
-		if(arr1[l]<=arr2[r){
+		if(arr1[l]<=arr2[r]){
 			arr3[i]=arr1[l];
 			l++;
 			i++;
 		}
 		else{
-			arr3[i]=arr2[r]
+			arr3[i]=arr2[r];
 			r++;
 			i++;
 		}
@@ -38,5 +38,12 @@ int main(){
 		else{
 			arr2[i-n]=arr3[i];
 		}
+	}
+	for(int i=0;i<n;i++){
+		cout<<arr1[i]<<" ";
+	}
+	cout<<endl;
+	for(int i=0;i<m;i++){
+		cout<<arr2[i]<<" ";
 	}
 }
