@@ -28,7 +28,7 @@ int main(){
 	for(int i=maxi;i<=sum;i++){
 		int daysreq=func(arr,i,n);
 		if(daysreq<=days){
-			cout<<daysreq<<endl;
+			cout<<i<<endl;
 			break;
 		}
 	}
