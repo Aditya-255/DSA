@@ -18,24 +18,7 @@ bool possible(int bloomDay[],int day,int m,int k){
 	}
 	return false;
 }
-int minii(int bloomDay[],int n){
-	int mini=INT_MAX;
-	for(int i=0;i<n;i++){
-		if(bloomDay[i]<mini){
-			mini=bloomDay[i];
-		}
-	}
-	return mini;
-}
-int maxii(int bloomDay[],int n){
-	int maxi=INT_MIN;
-	for(int i=0;i<n;i++){
-		if(bloomDay[i]>maxi){
-			maxi=bloomDay[i];
-		}
-	}
-	return maxi;
-}
+
 int BSmin(int bloomDay[],int m,int k){
 	int n=8;
 	int maxi=INT_MIN;

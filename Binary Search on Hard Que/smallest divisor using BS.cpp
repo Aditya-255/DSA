@@ -14,7 +14,7 @@ int BSSmall(int arr[],int n,int th){
 			sum+=(arr[i]+mid-1)/mid;
 		}
 		if(sum<=th){
-			ans=mid;
+			ans=mid; 
 			high=mid-1;
 		}
 		else{
