@@ -21,13 +21,7 @@ int main(){
 	int arr[n]={0,3,4,7,10,9};
 	sort(arr, arr + n);
 	int cows=4;
-	int mini=INT_MAX;
-	int maxi=INT_MIN;
-	for(int i=0;i<n;i++){
-		mini=min(mini,arr[i]);
-		maxi=max(maxi,arr[i]);
-	}
-	for(int i=1;i<=(maxi-mini);i++){
+	for(int i=1;i<=(arr[n-1]-arr[0]);i++){
 		if(canweplace(arr,i,cows)){
 			continue;
 		}
