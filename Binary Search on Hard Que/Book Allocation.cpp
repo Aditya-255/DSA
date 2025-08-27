@@ -2,7 +2,7 @@
 using namespace std;
 int func(int arr[],int p){
 	int st=1,pages=0;
-	int n=6;
+	int n=5;
 	for(int i=0;i<n;i++){
 		if(pages+arr[i]<=p){
 			pages+=arr[i];
