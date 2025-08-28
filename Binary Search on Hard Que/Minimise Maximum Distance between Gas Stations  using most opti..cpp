@@ -29,5 +29,5 @@ int main(){
 			high=mid;
 		}
 	}
-	cout << fixed << setprecision(6) << ans << endl;
+	cout << ans << endl;
 }
