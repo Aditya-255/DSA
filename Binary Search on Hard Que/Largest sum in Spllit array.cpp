@@ -29,7 +29,7 @@ int Minel(int arr[],int n,int k){
 		int mid=(low+high)/2;
 		if(Possible(arr,n,k,mid)){
 			ans=mid;
-			high=mid-1;
+			high=mid-1;n
 		}
 		else{
 			low=mid+1;
@@ -39,7 +39,7 @@ int Minel(int arr[],int n,int k){
 }
 int main(){
 	int n=4;
-	int arr[n]={10,20,30,40,};
+	int arr[n]={10,20,30,40};
 	int k=2;
 	int ans=Minel(arr,n,k);
 	cout<<ans<<endl;
