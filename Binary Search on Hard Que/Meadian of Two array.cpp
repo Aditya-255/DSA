@@ -8,7 +8,7 @@ int main(){
 	vector<int> ans;
 	int i=0,j=0;
 	while(i<n && j<m){
-		if(arr1[i]<=arr2[j]){
+		if(arr1[i]<arr2[j]){
 			ans.push_back(arr1[i]);
 			i++;
 		}
@@ -25,7 +25,11 @@ int main(){
 		ans.push_back(arr2[j]);
 		j++;
 	}
-	for(int i=0;i<ans.size();i++){
-		cout<<ans[i]<<" ";
+	int len=n+m;
+	if(len%2==1){
+		cout<<ans[len/2]<<endl;
+	}
+	else{
+		cout<<(ans[len/2]+ans[(len/2)-1])/2<<endl;
 	}
 }
