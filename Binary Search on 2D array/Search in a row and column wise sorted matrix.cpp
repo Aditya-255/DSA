@@ -51,7 +51,7 @@ int main(){
 	matrix.push_back(r2);
 	matrix.push_back(r3);
 	int n=matrix.size();
-	int target=13;
+	int target=16;
 	int m=matrix[0].size();
 	if(search1(matrix,n,m,target)){
 		cout<<"true"<<endl;

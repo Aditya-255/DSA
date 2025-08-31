@@ -6,7 +6,7 @@ bool search2(vector<vector<int> > &matrix,int n,int m,int target){
 		if(matrix[row][col]==target){
 			return true;
 		}
-		else if(matrix[row][col]<target){
+		else if(matrix[row][col]<target){ 
 			row++;
 		}
 		else{

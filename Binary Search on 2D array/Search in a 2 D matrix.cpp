@@ -43,4 +43,5 @@ int main(){
     		cout<<bs(arr[i],target)<<endl;;
 		}
 	}
+	
 }
