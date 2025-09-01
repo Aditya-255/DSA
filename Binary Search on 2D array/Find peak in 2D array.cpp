@@ -31,8 +31,8 @@ vector<int> ans(vector<vector<int> > &mat,int n,int m){
 			low=mid+1;
 		}
 	}
-	 vector<int> res;
-    res.push_back(-1);
+	vector<int> res;
+    res.push_back(-1); 
     res.push_back(-1);
     return res;
 }
