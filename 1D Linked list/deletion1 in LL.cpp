@@ -20,9 +20,12 @@ Node* Conv(vector<int> &arr){
 	return head;
 }
 Node* delehead(Node* head){
+	if(head==NULL){
+		return head;
+	}
 	Node* temp=head;
 	head=head->next;
-	free(temp);
+	free(temp); // delete temp
 	return head;
 }
 int main(){

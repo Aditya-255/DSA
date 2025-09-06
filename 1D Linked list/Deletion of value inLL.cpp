@@ -7,34 +7,32 @@ class Node{
 		Node(int d){
 			data=d;
 			next=NULL;
-		}
+		} 
 };
-Node* Conv(vector<int> &arr){
+Node* Convert(vector<int> &arr){
 	Node* head=new Node(arr[0]);
-	Node* mover=head;
+	Node* move=head;
 	for(int i=1;i<arr.size();i++){
 		Node* temp=new Node(arr[i]);
-		mover->next=temp;
-		mover=temp;
+		move->next=temp;
+		move=temp;
 	}
 	return head;
 }
-Node* delepos(Node* head,int k){
+Node* Remove(Node* &head,int val){
 	if(head==NULL){
 		return head;
 	}
-	if(k==1){
+	if(head->data==val){
 		Node* temp=head;
 		head=head->next;
 		free(temp);
 		return head;
 	}
-	int c=0;
 	Node* temp=head;
 	Node* prev=NULL;
 	while(temp!=NULL){
-		c++;
-		if(c==k){
+		if(temp->data==val){
 			prev->next=prev->next->next;
 			free(temp);
 			break;
@@ -44,18 +42,25 @@ Node* delepos(Node* head,int k){
 	}
 	return head;
 }
+
+
 int main(){
 	vector<int> arr;
-	arr.push_back(2);
-	arr.push_back(5);
+	arr.push_back(1);
 	arr.push_back(8);
-	arr.push_back(7);
-	Node* head=Conv(arr);
-	int k=3;
-	head=delepos(head,k);
-	Node* temp=head; 
-	while(temp!=NULL){
-		cout<<temp->data<<" ";
-		temp=temp->next;
+	arr.push_back(9);
+	arr.push_back(3);
+	Node* head=Convert(arr);
+	Node* t=head;
+	while(t!=NULL){
+		cout<<t->data<<" ";
+		t=t->next;
+	}
+	cout<<endl;
+	head=Remove(head,8);
+	Node* t1=head;
+	while(t1!=NULL){
+		cout<<t1->data<<" ";
+		t1=t1->next;
 	}
 }
