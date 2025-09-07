@@ -60,6 +60,7 @@ Node* kthel(Node* head,int k){
 	front->back=prev;
 	temp->next=NULL;
 	temp->back=NULL;
+	delete temp;
 	return head;
 }
 int main(){

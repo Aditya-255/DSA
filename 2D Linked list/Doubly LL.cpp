@@ -35,5 +35,4 @@ int main(){
 		cout<<temp->data<<" ";
 		temp=temp->next;
 	}
-	cout<<head->back->data<<endl;
 }

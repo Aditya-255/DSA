@@ -25,6 +25,7 @@ Node* Convert(vector<int> &arr){
 }
 Node* inshead(Node* head,int val){
 	Node* temp=new Node(val);
+	head->back=temp;
 	temp->back=NULL;
 	temp->next=head;
 	head=temp;
