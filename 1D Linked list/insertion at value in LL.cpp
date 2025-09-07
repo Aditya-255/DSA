@@ -50,9 +50,8 @@ int main(){
 	Node* head=Convert(arr);
 	head=insbefore(head,9,5);
 	Node* temp=head;
-	while(temp!=NULL){
+	while(temp!=NULL){ 
 		cout<<temp->data<<" ";
 		temp=temp->next;
 	}
-	
 } 
