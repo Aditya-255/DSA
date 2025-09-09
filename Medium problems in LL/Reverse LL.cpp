@@ -4,11 +4,9 @@ class Node{
 	public:
 		int data;
 		Node* next;
-		Node* back;
 		Node(int d){
 			data=d;
 			next=NULL;
-			back=NULL;
 		}
 };
 Node* Convert(vector<int> &arr){
