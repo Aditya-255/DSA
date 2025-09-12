@@ -19,27 +19,19 @@ Node* con(vector<int> &arr){
 	}
 	return head;
 }
-Node* delmid(Node* head){
+Node* deletemid(Node* head){
 	if(head==NULL || head->next==NULL){
 		return NULL;
 	}
-	Node* temp=head;
-	int n=0;
-	while(temp!=NULL){
-		n++;
-		temp=temp->next;
+	Node* slow=head;
+	Node* fast=head;
+	fast=fast->next->next;
+	while(fast!=NULL && fast->next!=NULL){
+		slow=slow->next;
+		fast=fast->next->next;
 	}
-	int res=n/2;
-	temp=head;
-	while(temp!=NULL){
-		res--;
-		if(res==0){
-			break;
-		}
-		temp=temp->next;
-	}
-	Node* del=temp->next;
-	temp->next=temp->next->next;
+	Node* del=slow->next;
+	slow->next=slow->next->next;
 	free(del);
 	return head;
 }
@@ -51,7 +43,7 @@ int main(){
 	arr.push_back(4);
 	arr.push_back(5);	
 	Node* head=con(arr);
-	head=delmid(head);
+	head=deletemid(head);
 	Node* temp=head;
 	while(temp!=NULL){
 		cout<<temp->data<<" ";
