@@ -54,12 +54,12 @@ int main(){
 	vector<int> arr;
 	arr.push_back(2);
 	arr.push_back(4);
-	arr.push_back(6);
+	arr.push_back(3);
 	
 	vector<int> arr1;
-	arr1.push_back(3);
-	arr1.push_back(8);
-	arr1.push_back(7);
+	arr1.push_back(5);
+	arr1.push_back(6);
+	arr1.push_back(4);
 	
 	Node* head1=Convert(arr);
 	Node* head2=Convert(arr1);
