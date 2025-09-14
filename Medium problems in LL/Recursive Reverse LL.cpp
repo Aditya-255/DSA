@@ -28,7 +28,7 @@ Node* revvv(Node* head){
 	front->next=head;
 	head->next=NULL;
 	return newhead;
-}
+} 
 int main(){
 	vector<int> arr;
 	arr.push_back(4);
