@@ -27,6 +27,8 @@ Node* remove(Node* head){
 	Node* nextnode=temp->next;
 	while(temp->next!=NULL){
 		if(temp->data==nextnode->data){
+			Node* dup=nextnode;
+			delete dup;
 			nextnode=nextnode->next;
 		}
 		else{
@@ -34,6 +36,24 @@ Node* remove(Node* head){
 			nextnode->back=temp;
 			temp=nextnode;
 		}	
+	}
+	return head;
+}
+Node* remove1(Node* head){
+	Node* temp=head;
+	
+	while(temp->next!=NULL){
+		Node* nextnode=temp->next;
+		while(nextnode!=NULL && nextnode->data==temp->data){
+			Node* dup=nextnode;
+			delete dup;
+			nextnode=nextnode->next;
+		}	
+		temp->next=nextnode;
+		if(nextnode){
+			nextnode->back=temp;
+		}
+		temp=temp->next;
 	}
 	return head;
 }
@@ -47,7 +67,7 @@ int main(){
 	arr.push_back(3);
 	arr.push_back(4);
 	Node* head=Convert(arr);
-	head=remove(head);
+	head=remove1(head);
 	Node* temp=head;
 	while(temp!=NULL){
 		cout<<temp->data<<" ";
