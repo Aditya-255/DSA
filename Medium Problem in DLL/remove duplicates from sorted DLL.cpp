@@ -25,7 +25,7 @@ Node* Convert(vector<int> arr){
 Node* remove(Node* head){
 	Node* temp=head;
 	Node* nextnode=temp->next;
-	while(temp->next!=NULL){
+	while(temp != NULL &&temp->next!=NULL){
 		if(temp->data==nextnode->data){
 			Node* dup=nextnode;
 			delete dup;
@@ -42,7 +42,7 @@ Node* remove(Node* head){
 Node* remove1(Node* head){
 	Node* temp=head;
 	
-	while(temp->next!=NULL){
+	while(temp != NULL && temp->next!=NULL){
 		Node* nextnode=temp->next;
 		while(nextnode!=NULL && nextnode->data==temp->data){
 			Node* dup=nextnode;
