@@ -19,8 +19,48 @@ Node* Convert(vector<int> arr){
 	}
 	return head;
 }
-Node* group(Node* head){
-	
+Node* reverse(Node* head){
+	if(head==NULL || head->next==NULL){
+		return head;
+	}
+	Node* newhead=reverse(head->next);
+	Node* front=head->next;
+	front->next=head;
+	head->next=NULL;
+	return newhead;
+} 
+Node* find(Node* temp,int k){
+	k=k-1;
+	while(temp!=NULL && k>0){
+		k--;
+		temp=temp->next;
+	}
+	return temp;
+}
+Node* group(Node* head,int k){
+	Node* temp=head;
+	Node* prev=NULL;
+	while(temp!=NULL){
+		Node* knode=find(temp,k);
+		if(knode==NULL){
+			if(prev){
+				prev->next=temp;
+			}
+			break;
+		}
+		Node* nextnode=knode->next;
+		knode->next=NULL;
+		reverse(temp);
+		if(temp==head){
+			head=knode;
+		}
+		else{
+			prev->next=knode;
+		}
+		prev=temp;
+		temp=nextnode;
+	}
+	return head;
 }
 int main(){
 	vector<int> arr;
