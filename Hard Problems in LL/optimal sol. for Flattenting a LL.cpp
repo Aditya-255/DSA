@@ -25,6 +25,7 @@ Node* merge(Node* l1,Node* l2){
 			res=l2;
 			l2=l2->bottom;
 		}
+		res->next=NULL;
 	}
 	if(l1){
 		res->bottom=l1;
