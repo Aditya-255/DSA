@@ -1,23 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-void func(int i,vector<int> &ds,int s,int sum,int arr[],int n){
+bool func(int i,vector<int> &ds,int s,int sum,int arr[],int n){
 	if(i==n){
 		if(s==sum){
 			for(int i=0;i<ds.size();i++){
 				cout<<ds[i]<<" ";
 			}
-			break;
-			cout<<endl;
+			return true;
 		}
-		return ;
+		return false;
 	}
 	ds.push_back(arr[i]);
 	s+=arr[i];
-	func(i+1,ds,s,sum,arr,n);
+	if(func(i+1,ds,s,sum,arr,n)==true){
+		return true;
+	}
 	s-=arr[i];
 	ds.pop_back();
 	
-	func(i+1,ds,s,sum,arr,n);
+	if(func(i+1,ds,s,sum,arr,n)==true){
+		return true;
+	}
+	return false;
 }
 int main(){
 	int arr[]={1,2,1};
