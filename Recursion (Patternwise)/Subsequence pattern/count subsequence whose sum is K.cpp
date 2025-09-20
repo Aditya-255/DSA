@@ -2,6 +2,9 @@
 using namespace std;
 int func(int i,int s,int sum,int arr[],int n){
 	int c=0;
+	if(s>sum){
+		return 0;
+	}
 	if(i==n){
 		if(s==sum){
 			return 1;

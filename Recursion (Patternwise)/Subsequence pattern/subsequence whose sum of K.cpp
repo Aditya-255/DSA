@@ -6,7 +6,6 @@ void func(int i,vector<int> &ds,int s,int sum,int arr[],int n){
 			for(int i=0;i<ds.size();i++){
 				cout<<ds[i]<<" ";
 			}
-			break;
 			cout<<endl;
 		}
 		return ;
