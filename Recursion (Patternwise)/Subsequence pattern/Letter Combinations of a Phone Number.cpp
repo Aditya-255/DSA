@@ -13,7 +13,6 @@ void backtrack(string &digits, int index, string &path) {
             path.push_back(letters[i]);
             backtrack(digits, index + 1, path);
             path.erase(path.size() - 1, 1);
-
         }
     }
 vector<string> solve(string digits) {

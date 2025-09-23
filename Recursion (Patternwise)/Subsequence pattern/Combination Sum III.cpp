@@ -8,7 +8,7 @@ void find(int ind,int k,int n,vector<int> &path,vector<vector<int> > &ans){
 	if(n<0 || path.size()>k){
 		return ;
 	}
-	for(int i=ind;i<9;i++){
+	for(int i=ind;i<=9;i++){
 		path.push_back(i);
 		find(i+1,k,n-i,path,ans);
 		path.pop_back();
