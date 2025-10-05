@@ -7,7 +7,7 @@ bool isSafe(int node, int col, vector<vector<int> >& graph, vector<int>& color, 
     }
     return true;
 }
-bool solve(int node, vector<vector<int> >& graph, int m, int n, vector<int>& color) {
+bool solve(int node, vector<<int> >& graph, int m, int n, vector<int>& color) {
     if (node == n)
         return true;
     for (int col = 1; col <= m; col++) {
