@@ -17,7 +17,7 @@ void solve(string num, int target, int index, long long value, long long last, s
         string part = num.substr(index, i - index + 1);
 
         long long curr;
-        stringstream ss(part);  // safer than stoll for older compilers
+        stringstream ss(part); 
         ss >> curr;
 
         if (index == 0) {
@@ -54,8 +54,8 @@ int main() {
         cout << "No valid expressions found.\n";
     } else {
         for (int i = 0; i < expressions.size(); i++) {
-    cout << expressions[i] << endl;
-}
+    		cout << expressions[i] << endl;
+		}
 
     }
 }
