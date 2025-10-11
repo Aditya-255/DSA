@@ -6,5 +6,5 @@ int main(){
 	for(int i=0;i<5;i++){
 		xor1=xor1^arr[i];
 	}
-	cout<<xor1<<endl;
-}
+	cout<<xor1<<endl; 
+} 
