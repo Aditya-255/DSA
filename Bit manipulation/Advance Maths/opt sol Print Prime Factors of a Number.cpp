@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 	vector<int> lst;
-	int n=35s;
+	int n=780;
 	for(int i=2;i*i<=n;i++){
 		if(n%i==0){
 			lst.push_back(i);
