@@ -2,8 +2,9 @@
 using namespace std;
 int main(){
 	int x=3;
-	int n=2;
+	int n=9;
 	int ans=1;
+	int m=n;
 	while(n>0){
 		if(n%2==1){
 			ans=ans*x;
@@ -13,6 +14,9 @@ int main(){
 			n=n/2;
 			x=x*x;
 		}
+	}
+	if(m<0){
+		ans=1/ans;
 	}
 	cout<<ans<<endl;
 }
