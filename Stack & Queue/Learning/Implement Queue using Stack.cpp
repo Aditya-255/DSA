@@ -17,7 +17,6 @@ class queuee{
 		void popp(){
 			s1.pop();
 		}
-		-
 		int topp(){
 			return s1.top();
 		}
