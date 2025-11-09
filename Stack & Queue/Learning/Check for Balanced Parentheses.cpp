@@ -22,7 +22,7 @@ bool func(string s){
 	return ss.empty();
 }
 int main(){
-	 string s="(){[][}";
+	 string s="(){[]}";
 
     if (func(s))
         cout << "Balanced\n";
