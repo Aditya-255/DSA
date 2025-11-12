@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 string pretoin(string s){
-	int i=s.length()-1;
+	int i=s.length(ft)-1;
 	stack<string> st;
 	string ans="";
 	while(i>=0){
