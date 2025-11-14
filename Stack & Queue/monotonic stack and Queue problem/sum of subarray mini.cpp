@@ -42,7 +42,6 @@ int sum(int arr[],int n){
 		int l=i-pse[i];
 		int r=nse[i]-i;
 		t=t+(r*l*arr[i]);
-		
 	}
 	return t;
 }
