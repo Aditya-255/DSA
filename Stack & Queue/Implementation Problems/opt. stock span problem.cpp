@@ -1,9 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int stockspan(int arr[],int ind,int n){
-	int c=0;
 	stack<int> st;
-	int a=-1;
 	for(int i=0;i<=ind;i++){
 		while(!st.empty()&& arr[st.top()]<=arr[i]){
 			st.pop();
