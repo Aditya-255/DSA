@@ -12,7 +12,7 @@ int func(int arr[][4],int n,int m){
 		}
 	}
 	for(int i=0;i<n;i++){
-		if(knowme[i]==n-1&& iknow[i]==0){
+		if(knowme[i]==n-1 && iknow[i]==0){
 			return i;
 		}
 	}

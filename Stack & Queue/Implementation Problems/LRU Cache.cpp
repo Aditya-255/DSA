@@ -26,7 +26,7 @@ class LRU{
 			tail=new Node(0,0);
 			head->next=tail;
 			tail->prev=head;
-		}
+		} 
 		void deletenode(Node* node){
 			Node* prevv=node->prev;
 			Node* nextt=node->next;
